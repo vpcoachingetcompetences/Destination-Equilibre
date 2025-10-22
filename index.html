@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Équilibre - Bilan de Compétences avec Véronique Pernot</title>
+    <meta name="description" content="Bilan de compétences personnalisé avec Véronique Pernot. Un voyage vers votre épanouissement professionnel. Éligible CPF, certifié Qualiopi.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* === VARIABLES ET RESET === */
+        :root {
+            --primary: #2C5F7C;
+            --primary-light: #4A8FB0;
+            --secondary: #A4D65E;
+            --accent: #8BC34A;
+            --bg-light: #F5F9F0;
+            --bg-white: #FFFFFF;
+            --text-dark: #2D3436;
+            --text-medium: #636E72;
+            --text-light: #B2BEC3;
+            --border: #DFE6E9;
+            --shadow: rgba(44, 95, 124, 0.1);
+            --shadow-hover: rgba(44, 95, 124, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        /* === TYPOGRAPHIE === */
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--primary);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-medium);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-light);
+        }
+
+        /* === CONTENEURS === */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        /* === HEADER === */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px var(--shadow);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            line-height: 1.3;
+        }
+
+        .logo-main {
+            font-size: 1.4rem;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-tagline {
+            font-size: 0.85rem;
+            font-weight: 400;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* === HERO === */
+        .hero {
+            background: linear-gradient(135deg, rgba(44, 95, 124, 0.95) 0%, rgba(74, 143, 176, 0.95) 100%), 
+                        url('images/hero-journey.jpg') center/cover no-repeat;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(44, 95, 124, 0.85) 0%, rgba(74, 143, 176, 0.85) 100%);
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #FFFFFF;
+            opacity: 1;
+            font-weight: 400;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+            color: #FFFFFF;
+            opacity: 1;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        .certifications {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .cert-badge {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            min-height: 80px;
+        }
+
+        .cert-badge img {
+            height: 50px;
+            width: auto;
+        }
+
+        .cert-text {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* === SECTIONS === */
+        .section-alt {
+            background-color: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: var(--text-medium);
+        }
+
+        /* === ABOUT SECTION === */
+        .about-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+
+        .about-text h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .credentials {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary);
+            margin-top: 2rem;
+        }
+
+        .credentials ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .credentials li {
+            padding: 0.5rem 0;
+            color: var(--text-medium);
+            display: flex;
+            align-items: start;
+            gap: 0.5rem;
+        }
+
+        .credentials li::before {
+            content: "✓";
+            color: var(--secondary);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* === CARDS === */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow-hover);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        /* === JOURNEY STEPS === */
+        .journey-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: 15px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .step-card:hover::before {
+            opacity: 1;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow-hover);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 4px 10px var(--shadow);
+        }
+
+        .step-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .step-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* === TIMELINE === */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-marker {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px var(--shadow);
+            z-index: 2;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px var(--shadow);
+            border-left: 4px solid var(--secondary);
+        }
+
+        .timeline-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-medium);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content ul {
+            margin-left: 1.5rem;
+            color: var(--text-medium);
+        }
+
+        .timeline-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* === QUOTE === */
+        .quote-box {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+
+        .quote-box blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .quote-box cite {
+            font-size: 1.1rem;
+            font-style: normal;
+            opacity: 0.9;
+        }
+
+        /* === INFO BOXES === */
+        .info-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .info-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px var(--shadow);
+            border-top: 4px solid var(--secondary);
+            transition: all 0.3s ease;
+        }
+
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow-hover);
+        }
+
+        .info-box-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .info-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .info-box p {
+            color: var(--text-medium);
+        }
+
+        .info-box .highlight {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        /* === CONTACT === */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+        }
+
+        .contact-details p, .contact-details a {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+
+        .cta-box h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            color: white;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .cta-box .cta-button {
+            background: white;
+            color: var(--primary);
+        }
+
+        .cta-box .cta-button:hover {
+            background: var(--bg-light);
+            color: var(--primary);
+        }
+
+        /* === LOGOS SECTION === */
+        .logos-section {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .logos-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .logo-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .logo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow-hover);
+        }
+
+        .logo-item img {
+            height: 80px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
+        }
+
+        /* === FOOTER === */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #FFFFFF;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .certifications {
+                gap: 1.5rem;
+            }
+
+            .cert-badge {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .journey-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* === ANIMATIONS === */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* === UTILITIES === */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
+        .highlight-text {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        /* === PHOTO ROUTE HERO === */
+        .journey-photo-hero {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .handwritten-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .handwritten-phrase {
+            position: absolute;
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFD93D;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.5);
+            line-height: 1.2;
+        }
+
+        .phrase-top-left {
+            top: 12%;
+            left: 8%;
+            transform: rotate(-5deg);
+        }
+
+        .phrase-top-right {
+            top: 12%;
+            right: 8%;
+            transform: rotate(3deg);
+            text-align: right;
+        }
+
+        .phrase-bottom-left {
+            bottom: 28%;
+            left: 6%;
+            transform: rotate(-4deg);
+        }
+
+        .phrase-bottom-right {
+            bottom: 28%;
+            right: 6%;
+            transform: rotate(2deg);
+            text-align: right;
+        }
+
+        .phrase-center-bottom {
+            bottom: 8%;
+            right: 18%;
+            font-size: 2.5rem;
+            color: #FFFFFF;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.9), -1px -1px 3px rgba(0,0,0,0.7);
+            transform: rotate(-2deg);
+        }
+
+        @media (max-width: 768px) {
+            .handwritten-phrase {
+                font-size: 1rem;
+            }
+            .phrase-center-bottom {
+                font-size: 1.5rem;
+                right: 10%;
+                bottom: 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .handwritten-phrase {
+                font-size: 0.85rem;
+            }
+            .phrase-center-bottom {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo-vpcoaching.jpg" alt="VP Coaching" style="height: 60px; width: auto; background: white; padding: 0.3rem; border-radius: 8px;">
+                    <div style="display: flex; flex-direction: column;">
+                        <span class="logo-main">VP COACHING & COMPÉTENCES</span>
+                        <span class="logo-tagline">Remettre l'humain au centre</span>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#accompagnante">Qui suis-je ?</a></li>
+                        <li><a href="#pourquoi">Pourquoi ?</a></li>
+                        <li><a href="#methode">La méthode</a></li>
+                        <li><a href="#modalites">Modalités</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <p style="font-size: 1.3rem; font-weight: 700; letter-spacing: 0.3em; color: white; margin-bottom: 0.8rem; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">BILAN DE COMPÉTENCES</p>
+            <h1>Destination Équilibre</h1>
+            
+            <!-- Photo route avec phrases manuscrites -->
+            <div class="journey-photo-hero">
+                <img src="images/road-journey.jpg" alt="Route vers l'épanouissement" style="width: 100%; height: auto; display: block;">
+                <div class="handwritten-overlay">
+                    <div class="handwritten-phrase phrase-top-left">Perte de sens</div>
+                    <div class="handwritten-phrase phrase-top-right">Questionnement<br>professionnel</div>
+                    <div class="handwritten-phrase phrase-bottom-left">Désir de<br>reconversion</div>
+                    <div class="handwritten-phrase phrase-bottom-right">Recherche<br>d'emploi</div>
+                    <div class="handwritten-phrase phrase-center-bottom" style="font-size: 2.5rem;">Et vous, vous en êtes où ?</div>
+                </div>
+            </div>
+            
+            <p class="subtitle">Un voyage vers votre épanouissement professionnel</p>
+            <p class="hero-description">
+                Faites le point sur vous et vos compétences pour passer à l'action en confiance. 
+                Parce que mieux se connaître, c'est déjà avancer… et construire un projet professionnel 
+                réaliste, motivant et aligné avec vos aspirations, c'est transformer votre parcours.
+            </p>
+            <a href="https://zcal.co/veroniquepernot69" target="_blank" class="cta-button">Réserver mon entretien gratuit</a>
+            
+            <div class="certifications">
+                <div class="cert-badge">
+                    <img src="images/logo-cpf.png" alt="Mon Compte Formation - CPF" style="height: 50px;">
+                    <span class="cert-text">Éligible CPF</span>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                    <div class="cert-badge" style="padding: 0.5rem;">
+                        <img src="images/logo-qualiopi-marianne.png" alt="Qualiopi - Processus certifié" style="height: 85px;">
+                    </div>
+                    <span style="font-size: 0.55rem; text-align: center; line-height: 1.3; max-width: 220px; color: white;">
+                        La certification qualité a été délivrée au titre des catégories d'actions suivantes :<br>
+                        <strong style="text-transform: uppercase; font-size: 0.55rem;">ACTIONS DE FORMATION<br>BILANS DE COMPÉTENCES</strong>
+                    </span>
+                </div>
+                <div class="cert-badge">
+                    <span class="cert-text">Entretien d'information gratuit</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACCOMPAGNANTE -->
+    <section id="accompagnante">
+        <div class="container">
+            <h2 class="section-title">Votre accompagnante</h2>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/veronique-pernot.jpg" alt="Véronique Pernot - Coach et Consultante en Bilan de Compétences">
+                </div>
+                
+                <div class="about-text">
+                    <h3>Véronique PERNOT</h3>
+                    <p>
+                        Passionnée par l'accompagnement humain et le développement professionnel, je vous guide 
+                        avec bienveillance dans votre parcours de réflexion et de transformation. Mon approche 
+                        s'appuie sur une écoute active, des outils pragmatiques et une méthodologie éprouvée 
+                        pour vous aider à clarifier vos aspirations et à construire un projet professionnel 
+                        qui vous ressemble vraiment.
+                    </p>
+                    <p>
+                        Chaque personne est unique, et c'est cette singularité que je m'attache à révéler 
+                        et à valoriser. Mon objectif : vous permettre de retrouver du sens, de la confiance 
+                        et de l'autonomie dans votre parcours professionnel.
+                    </p>
+                    
+                    <div class="credentials">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Mes certifications et qualifications</h4>
+                        <ul>
+                            <li>Consultante en Évolution Professionnelle depuis 2023</li>
+                            <li>Coach Personnelle et Professionnelle Certifiée RNCP depuis 2022</li>
+                            <li>Certification au RS de France Compétence – Accompagner un(e) bénéficiaire de Bilan de Compétences</li>
+                            <li>Membre de la CAE Graines de Sol, organisme certifié Qualiopi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POURQUOI FAIRE UN BILAN -->
+    <section id="pourquoi" class="section-alt">
+        <div class="container">
+            <h2 class="section-title">Pourquoi faire un bilan de compétences ?</h2>
+            <p class="section-intro">
+                Le bilan de compétences s'inscrit souvent dans un moment de transition, marqué par un besoin profond de changement. 
+                Ce besoin peut naître de diverses situations : lassitude face à un poste sans évolution, perte de sens dans son activité, 
+                envie de mieux concilier vie professionnelle et vie personnelle, ou encore le désir d'exploiter pleinement ses talents.
+            </p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="images/benefit-compass.jpg" alt="Clarifier votre projet" class="card-image">
+                    <h3>Clarifier votre projet</h3>
+                    <p>
+                        Vous élaborez un ou des projet(s) réaliste(s), enthousiasmant(s) et un plan d'action concret 
+                        pour lancer votre transition — que ce soit une évolution, une reconversion, une création d'activité 
+                        ou un retour à l'emploi.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="images/benefit-computer.jpg" alt="Renforcer votre employabilité" class="card-image">
+                    <h3>Renforcer votre employabilité</h3>
+                    <p>
+                        Identifiez et structurez vos compétences professionnelles et personnelles. 
+                        Renforcez votre employabilité dans un marché en mutation et développez vos aptitudes 
+                        à agir, décider et vous adapter.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="images/benefit-reflection.jpg" alt="Retrouver l'équilibre" class="card-image">
+                    <h3>Retrouver l'équilibre</h3>
+                    <p>
+                        Améliorez votre niveau de satisfaction au travail en clarifiant vos motivations profondes, 
+                        vos valeurs et vos leviers d'épanouissement. Gagnez en autonomie pour piloter votre carrière 
+                        de façon éclairée et durable.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="images/benefit-balloons.jpg" alt="Sécuriser votre parcours" class="card-image">
+                    <h3>Sécuriser votre parcours</h3>
+                    <p>
+                        Bénéficiez d'un accompagnement structuré qui allie écoute bienveillante et outils pragmatiques. 
+                        Ce regard extérieur vous aide à clarifier votre situation, à objectiver vos compétences transférables 
+                        et à envisager des pistes nouvelles.
+                    </p>
+                </div>
+            </div>
+
+            <div class="quote-box mt-2">
+                <blockquote>
+                    « Le futur a été créé pour être changé. »
+                </blockquote>
+                <cite>— Paulo Coelho</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- LA MÉTHODE - 8 ÉTAPES -->
+    <section id="methode">
+        <div class="container">
+            <h2 class="section-title">La méthode « Destination Équilibre »</h2>
+            <p class="section-intro">
+                Un parcours structuré en 8 étapes inspirantes, guidé par la métaphore du voyage. 
+                Votre boussole intérieure (valeurs et motivations), votre carte (parcours professionnel), 
+                votre route (projet professionnel) et votre équipement (compétences et outils).
+            </p>
+
+            <div class="journey-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Préparer le voyage</h3>
+                    <p>
+                        Entretien préliminaire gratuit pour comprendre votre situation, vos attentes et valider 
+                        la pertinence du bilan. Nous définissons ensemble les objectifs et le cadre de notre collaboration.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>La situation de départ</h3>
+                    <p>
+                        Analyse de votre parcours personnel et professionnel. Où en êtes-vous aujourd'hui ? 
+                        Quelles sont vos réussites, vos apprentissages ? Nous créons l'alliance et définissons 
+                        précisément vos objectifs de bilan.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Découvrir votre boussole intérieure</h3>
+                    <p>
+                        Exploration de vos valeurs essentielles et de vos motivations profondes. 
+                        Qu'est-ce qui donne du sens à votre vie professionnelle ? Qu'est-ce qui vous met en mouvement ? 
+                        Nous identifions votre Nord personnel.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Comprendre votre personnalité</h3>
+                    <p>
+                        Analyse de votre personnalité et de vos besoins professionnels. Comment fonctionnez-vous ? 
+                        Quel environnement de travail vous permet de vous épanouir ? Nous explorons votre rapport au changement.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h3>Révéler vos trésors cachés</h3>
+                    <p>
+                        Identification et structuration de vos compétences (soft skills, hard skills, compétences transférables), 
+                        de vos qualités et de vos ressources. Nous analysons vos réalisations et fiertés professionnelles.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <h3>Explorer les possibles</h3>
+                    <p>
+                        Identification des possibilités professionnelles qui s'offrent à vous. Quels métiers, quels secteurs 
+                        sont en phase avec votre profil ? Nous mettons en œuvre des démarches concrètes : recherches, enquêtes métiers.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">7</div>
+                    <h3>Construire votre projet</h3>
+                    <p>
+                        Analyse de faisabilité et construction de votre projet professionnel. Validation de votre choix, 
+                        étude de cohérence, définition d'un plan d'action SMART et anticipation des difficultés.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">8</div>
+                    <h3>Se lancer en toute confiance</h3>
+                    <p>
+                        Synthèse, restitution et clôture du bilan. Vous recevez votre document de synthèse personnalisé 
+                        et vos outils pour poursuivre en autonomie. Suivi à 6 mois offert pour ajuster votre plan d'action.
+                    </p>
+                </div>
+            </div>
+
+            <div class="quote-box mt-2">
+                <blockquote>
+                    « Redonner du sens à votre parcours, étape par étape »
+                </blockquote>
+            </div>
+
+            <!-- PROGRAMME RÉGLEMENTAIRE -->
+            <h3 class="section-title" style="margin-top: 4rem;">Le programme réglementaire</h3>
+            <p class="section-intro">
+                Le bilan de compétences suit un cadre réglementaire structuré en trois phases, 
+                garantissant la qualité et la rigueur de l'accompagnement.
+            </p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>Phase préliminaire</h3>
+                        <p><strong>Entretien gratuit et sans engagement</strong></p>
+                        <p>
+                            Cette première étape a pour objectif de comprendre votre besoin, d'analyser votre situation actuelle 
+                            et de clarifier vos attentes. Ensemble, nous définissons les conditions de déroulement du bilan 
+                            (rythme, modalités, durée) et je vous présente les méthodes, outils et techniques que nous utiliserons.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>Phase d'investigation</h3>
+                        <p><strong>Co-construction de votre projet</strong></p>
+                        <p>
+                            Cette phase centrale explore plusieurs dimensions essentielles :
+                        </p>
+                        <ul>
+                            <li>Votre parcours professionnel et personnel</li>
+                            <li>Vos compétences et savoir-être</li>
+                            <li>Votre profil de personnalité</li>
+                            <li>Vos valeurs, motivations et aspirations</li>
+                            <li>Votre environnement professionnel et le marché du travail</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>Phase de conclusion</h3>
+                        <p><strong>Votre projet professionnel et votre plan d'action</strong></p>
+                        <p>
+                            Cette dernière phase vise à traduire les acquis de l'investigation en projet(s) professionnel(s) 
+                            concret(s) et réaliste(s). Vous recevez un document de synthèse personnalisé et un plan d'action 
+                            opérationnel avec étapes, échéances et ressources à mobiliser.
+                        </p>
+                        <p>
+                            <strong>Suivi à 6 mois offert</strong> pour évaluer la mise en œuvre de votre projet 
+                            et ajuster votre plan d'action si nécessaire.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODALITÉS PRATIQUES -->
+    <section id="modalites" class="section-alt">
+        <div class="container">
+            <h2 class="section-title">Modalités pratiques</h2>
+
+            <div class="info-boxes">
+                <div class="info-box">
+                    <span class="info-box-icon">🎁</span>
+                    <h3>Entretien gratuit</h3>
+                    <p><strong>1 heure offerte</strong></p>
+                    <p>Sans engagement</p>
+                    <p>Pour comprendre votre situation, vous informer sur le bilan et valider la pertinence du parcours</p>
+                    <p style="margin-top: 1rem;"><strong>+ Suivi à 6 mois offert</strong></p>
+                </div>
+
+                <div class="info-box">
+                    <span class="info-box-icon">⏱️</span>
+                    <h3>Durée</h3>
+                    <span class="highlight">24 heures</span>
+                    <p>16h d'entretiens individuels (8 séances de 2h) + 1 entretien gratuit</p>
+                    <p>8h de travail personnel guidé</p>
+                    <p><small>Parcours de 8 semaines à 3 mois selon votre rythme</small></p>
+                </div>
+
+                <div class="info-box">
+                    <span class="info-box-icon">💰</span>
+                    <h3>Financement</h3>
+                    <span class="highlight">2 220 € TTC</span>
+                    <p><strong>Éligible au CPF</strong></p>
+                    <p>Reste à charge : 102,23€ en 2025</p>
+                    <p><small>(Exemption pour les demandeurs d'emploi)</small></p>
+                    <p><small>Autres financements possibles : employeur, France Travail, ANFH, OPCO</small></p>
+                </div>
+
+                <div class="info-box">
+                    <span class="info-box-icon">📍</span>
+                    <h3>Lieu</h3>
+                    <p><strong>Présentiel :</strong></p>
+                    <p>Saint Genis Laval (69230)</p>
+                    <p>ou Oullins Pierre Bénite (69600)</p>
+                    <p style="margin-top: 1rem;"><strong>Distanciel :</strong></p>
+                    <p>Visioconférence (Zoom, Teams)</p>
+                    <p><strong>Ou mixte selon vos besoins</strong></p>
+                </div>
+            </div>
+
+            <div class="cards-grid mt-2">
+                <div class="card">
+                    <h3>Accompagnement individuel</h3>
+                    <p>
+                        Un consultant unique tout au long du parcours. L'accompagnement s'effectue en présentiel 
+                        ou à distance, sur une période allant de 8 semaines à 3 mois, se déroulant pendant ou en dehors 
+                        du temps de travail (selon accord avec l'employeur ou statut du bénéficiaire).
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Planning personnalisé</h3>
+                    <p>
+                        Les dates sont fixées en fonction de la disponibilité du bénéficiaire et du consultant. 
+                        Un planning personnalisé est établi lors de l'entretien préliminaire. Les séances ont lieu 
+                        généralement 1 fois par semaine le premier mois, puis 1 fois tous les 15 jours par la suite.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Aucun prérequis</h3>
+                    <p>
+                        Le bilan de compétences est ouvert à toute personne majeure, sans condition de diplôme, 
+                        de statut ou d'expérience professionnelle. Toutefois, pour tirer pleinement profit de l'accompagnement, 
+                        il est souhaitable que le bénéficiaire dispose d'une expérience professionnelle significative 
+                        et fasse preuve d'une motivation claire.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGOS ET CERTIFICATIONS -->
+    <section class="logos-section">
+        <div class="container">
+            <h3 class="section-title">Certifications et partenaires</h3>
+            <div class="logos-grid">
+                <div class="logo-item">
+                    <img src="images/logo-cpf.png" alt="Mon Compte Formation - CPF">
+                </div>
+                <div class="logo-item" style="display: flex; flex-direction: column; align-items: center; padding: 0.5rem;">
+                    <img src="images/logo-qualiopi-marianne.png" alt="Qualiopi - Processus certifié" style="margin-bottom: 0.5rem; height: 120px; width: auto;">
+                    <p style="font-size: 0.7rem; color: var(--text-dark); text-align: center; line-height: 1.4; margin: 0; max-width: 300px;">
+                        La certification qualité a été délivrée au titre des catégories d'actions suivantes :<br>
+                        <strong style="text-transform: uppercase; font-size: 0.7rem;">ACTIONS DE FORMATION<br>BILANS DE COMPÉTENCES</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-alt">
+        <div class="container">
+            <h2 class="section-title">Démarrer votre voyage</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Véronique PERNOT</h3>
+                    <p style="color: var(--text-medium); margin-bottom: 2rem;">
+                        Consultante en Évolution Professionnelle depuis 2023<br>
+                        Coach Personnelle et professionnelle Certifiée RNCP depuis 2022<br>
+                        Certification au RS de France Compétence
+                    </p>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p><a href="tel:0665160277">06.65.16.02.77</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:vpcoachingetcompetences@gmail.com">vpcoachingetcompetences@gmail.com</a></p>
+                            <p style="margin-top: 0.8rem; font-size: 0.9rem; color: var(--text-medium); font-style: italic;">
+                                Vous recevrez une réponse sous 48h pour convenir d'un rendez-vous.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">🏢</span>
+                        <div class="contact-details">
+                            <h4>Organisme de formation</h4>
+                            <p>Graines de Sol</p>
+                            <p>NDA : 82691085369 - Certifié Qualiopi</p>
+                            <p><a href="http://www.grainesdesol.fr" target="_blank">www.grainesdesol.fr</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div class="contact-details">
+                            <h4>Lieux d'accueil</h4>
+                            <p>Saint Genis Laval (69230)</p>
+                            <p>Oullins Pierre Bénite (69600) - Espace adapté PMR</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-box">
+                    <h3>Prêt(e) à démarrer ?</h3>
+                    <p>
+                        Réservez dès maintenant votre entretien préliminaire gratuit et sans engagement. 
+                        C'est le premier pas vers votre épanouissement professionnel.
+                    </p>
+                    <a href="https://zcal.co/veroniquepernot69" target="_blank" class="cta-button">
+                        Réserver mon entretien gratuit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo-vpcoaching.jpg" alt="VP Coaching & Compétences" style="max-width: 200px; margin-bottom: 1rem; background: white; padding: 1rem; border-radius: 10px;">
+                    <h4>VP Coaching & Compétences</h4>
+                    <p>Remettre l'humain au centre</p>
+                    <p style="margin-top: 1rem;">
+                        Accompagnement bienveillant et professionnel pour votre bilan de compétences. 
+                        Une approche humaine ancrée dans les pratiques du coaching.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Liens utiles</h4>
+                    <p><a href="#accueil">Accueil</a></p>
+                    <p><a href="#accompagnante">Qui suis-je ?</a></p>
+                    <p><a href="#pourquoi">Pourquoi faire un bilan ?</a></p>
+                    <p><a href="#methode">La méthode Destination Équilibre</a></p>
+                    <p><a href="#modalites">Modalités pratiques</a></p>
+                    <p><a href="#contact">Contact</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Organisme de formation</h4>
+                    <p><strong>Graines de Sol</strong></p>
+                    <p>122 bis boulevard Émile Zola</p>
+                    <p>69600 Oullins-Pierre-Bénite</p>
+                    <p style="margin-top: 1rem;">
+                        NDA : 82691085369<br>
+                        Certifié Qualiopi
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <a href="mailto:formation@grainesdesol.fr">formation@grainesdesol.fr</a><br>
+                        <a href="tel:0478159232">04 78 15 92 32</a>
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Certifications</h4>
+                    <p>Formation éligible au CPF (Compte Personnel de Formation)</p>
+                    <p>Organisme certifié Qualiopi pour la qualité de ses actions de formation et bilans de compétences</p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Indicateurs qualité 2022 :</strong><br>
+                        1033 stagiaires formés<br>
+                        13524 heures de formation dispensées
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p style="color: #FFFFFF;">&copy; 2025 VP Coaching & Compétences - Véronique Pernot. Tous droits réservés.</p>
+                <p style="margin-top: 0.5rem; color: #FFFFFF;">
+                    Mentions légales : Organisme de formation membre de la CAE « Graines de Sol », 
+                    enregistré sous le numéro NDA 82691085369 auprès du Préfet de la région Auvergne Rhône Alpes. 
+                    Cet enregistrement ne vaut pas agrément de l'État.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll pour les liens d'ancrage
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .step-card, .timeline-item, .info-box').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
